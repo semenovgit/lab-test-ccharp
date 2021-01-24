@@ -1,7 +1,5 @@
-using System;
 using NUnit.Framework;
 using OpenQA.Selenium;
-using OpenQA.Selenium.Support.UI;
 
 namespace NUnitTestProject1
 {
@@ -10,15 +8,16 @@ namespace NUnitTestProject1
         private IWebDriver driver;
         [SetUp]
         public void Setup()
+
         {
             // перед тестами
             driver = new OpenQA.Selenium.Chrome.ChromeDriver();
-            driver.Navigate().GoToUrl("http://www.cian.ru");
+            driver.Navigate().GoToUrl("http://www.google.com");
             driver.Manage().Window.Maximize();
         }
 
         [Test]
-        public void Test1()
+        public void Test()
         {
             Assert.Pass();
         }
